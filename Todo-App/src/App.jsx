@@ -5,10 +5,10 @@ function App() {
   const [todoList, setTodoList] = useState([
     { id: 0, content: "공부하기" },
     { id: 1, content: "청소하기" },
-    { id: 2, content: "" },
-    { id: 3, content: "바보" },
-    { id: 4, content: "멍청이" },
-    { id: 5, content: "이재헌 === 이재현" },
+    { id: 2, content: "밥먹기" },
+    { id: 3, content: "괴롭히기" },
+    { id: 4, content: "잠자기" },
+    { id: 5, content: "운동하기" },
   ]);
 
   return (
