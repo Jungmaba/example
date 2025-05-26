@@ -4,3 +4,52 @@
   box-sizing: border-box;
   background-color: #333;
 }
+
+body, html{
+  height: 100vh;
+}
+
+
+.container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.timer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+} 
+
+.digit {
+  background-color: black;
+  border-radius: 20%;
+  margin: 3px;
+  width: 3rem;
+  height: 3rem;
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(68, 75, 81);
+
+  font-size: 2rem;
+  margin: 0 3px;
+}
+
+.dateLine{
+  display: flex;
+}
+
+.timeLine{
+  display: flex;
+}
+
+button {
+  margin: 10px;
+}
+
