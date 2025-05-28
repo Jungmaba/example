@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 /**
  * Clock 컴포넌트
@@ -11,7 +11,6 @@ import { useEffect, useState } from "react";
  * - 시계가 실행 중일 때 매초마다 시간을 업데이트합니다.
  **/
 function Clock() {
-
   const today = new Date();
   // const dateFormatted = `${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
 
@@ -22,22 +21,22 @@ function Clock() {
     if (stop) return;
     const interval = setInterval(() => {
       setTime(new Date());
-    }, 1000)
+    }, 1000);
     return () => clearInterval(interval);
-  }, [stop])
+  }, [stop]);
 
   const handleTimerToggle = () => {
     setStop((prev) => !prev);
   };
 
   const year = today.getFullYear();
-  const month = String(today.getMonth() + 1).padStart(2, "0");
-  const date = String(today.getDate()).padStart(2, "0");
-  const hour = String(today.getHours()).padStart(2, "0");
-  const minute = String(today.getMinutes()).padStart(2, "0");
-  const second = String(today.getSeconds()).padStart(2, "0");
+  const month = String(today.getMonth() + 1).padStart(2, '0');
+  const date = String(today.getDate()).padStart(2, '0');
+  const hour = String(today.getHours()).padStart(2, '0');
+  const minute = String(today.getMinutes()).padStart(2, '0');
+  const second = String(today.getSeconds()).padStart(2, '0');
   // const fullString = `${year}/${month}/${date} ${hour}:${minute}:${second}`;
-  // const chars = fullString.split(""); 
+  // const chars = fullString.split("");
 
   const dateString = `${year}/${month}/${date}`;
   const timeString = `${hour}:${minute}:${second}`;
@@ -46,26 +45,25 @@ function Clock() {
     <>
       <div className="timer-container">
         <div className="dateLine">
-          {dateString.split("").map((char, index) => (
+          {dateString.split('').map((char, index) => (
             <span key={index} className="digit">
               {char}
             </span>
           ))}
         </div>
         <div className="timeLine">
-          {timeString.split("").map((char, index) => (
+          {timeString.split('').map((char, index) => (
             <span key={index} className="digit">
               {char}
             </span>
           ))}
         </div>
-      </div >
+      </div>
       <div>
-        <button onClick={() => handleTimerToggle()}> {stop ? '타이머 시작': '타이머 중지'} </button>
-       
+        <button onClick={() => handleTimerToggle()}> {stop ? '타이머 시작' : '타이머 중지'} </button>
       </div>
     </>
-  )
+  );
 }
 
 export default Clock;
