@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import { flexMixin, fontMixin, flexMixin2 } from "../styled/styled";
-/* ${flexMixin({ justify: "space-between", align: "center" })}; */
+
 const StyledHeader = styled.header`
-    ${flexMixin2("row", "space-betwenn", "center")};
+    ${flexMixin({ justify: "space-between", align: "center" })};
     padding: 20px 20px;
     background-color: black;
     ul {
-        ${flexMixin2("row", "space-betwenn", "center", "stretch", "20px")};
-
-        /* ${flexMixin({ justify: "space-betwenn", align: "center", gap: "20px" })}; */
+        ${flexMixin({ justify: "space-betwenn", align: "center", gap: "20px" })};
 
         li {
             ${fontMixin({ size: "16px", weight: "400" })};

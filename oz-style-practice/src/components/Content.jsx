@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { flexMixin, fontMixin, tag_color, grayColor } from "../styled/styled";
 
 const StyledContent = styled.div`
-    ${flexMixin({ direction: "colunm", align: "flex-start", gap: "5px" })};
+    ${flexMixin({ direction: "column", align: "flex-start", gap: "5px" })};
     img {
         width: 300px;
         border-radius: 10px;
