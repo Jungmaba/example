@@ -1,10 +1,10 @@
 import data from "../assets/data";
 import { combineReducers, legacy_createStore } from "redux";
 
-export const addToCart = (option, quantity, id) => {
+export const addToCart = (options, quantity, id) => {
     return {
         type: "addToCart",
-        payload: { option, quantity, id },
+        payload: { options, quantity, id },
     };
 };
 
