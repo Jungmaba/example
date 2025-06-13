@@ -1,5 +1,19 @@
 import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
-    plugins: [tailwindcss()],
+    plugins: [react(), tailwindcss()],
+    build: {
+        outDir: "docs",
+        rollupOptions: {
+            output: {
+                manualChunks: (id) => {
+                    if (id.indexOf("node_modules") !== -1) {
+                        const module = id.split("node_modules/").pop().split("/")[0];
+                        return `vendor-${module}`;
+                    }
+                },
+            },
+        },
+    },
 });
